@@ -1,0 +1,959 @@
+CRITICAL - 2024-07-31 05:29:01 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: usuarios]
+in SYSTEMPATH\BaseModel.php on line 1833.
+ 1 SYSTEMPATH\BaseModel.php(1833): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(806): CodeIgniter\BaseModel->transformDataToArray([], 'insert')
+ 3 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([], true)
+ 4 APPPATH\Controllers\Home.php(26): CodeIgniter\Model->insert([])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->create()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 18:56:58 --> ErrorException: Undefined variable $query
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'C:\\xmp\\htdocs\\api\\app\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 18:57:29 --> ErrorException: Undefined variable $query
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'C:\\xmp\\htdocs\\api\\app\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 18:58:02 --> ErrorException: Undefined variable $query
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'C:\\xmp\\htdocs\\api\\app\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 18:58:36 --> ErrorException: Undefined variable $query
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'C:\\xmp\\htdocs\\api\\app\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-31 19:04:25 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «datos.usuarios»
+LINE 1: select * from  datos.Usuarios limit 5
+                       ^ in C:\xmp\htdocs\api\system\Database\Postgre\Connection.php:193
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xmp\\htdocs\\a...', 193)
+#1 C:\xmp\htdocs\api\system\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'select * from  ...')
+#2 C:\xmp\htdocs\api\system\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('select * from  ...')
+#3 C:\xmp\htdocs\api\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('select * from  ...')
+#4 C:\xmp\htdocs\api\app\Controllers\Home.php(15): CodeIgniter\Database\BaseConnection->query('select * from  ...')
+#5 C:\xmp\htdocs\api\system\CodeIgniter.php(933): App\Controllers\Home->test1()
+#6 C:\xmp\htdocs\api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xmp\htdocs\api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xmp\htdocs\api\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xmp\htdocs\api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xmp\htdocs\api\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-31 19:04:25 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  no existe la relación «datos.usuarios»
+LINE 1: select * from  datos.Usuarios limit 5
+                       ^
+[Method: GET, Route: home/test1]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Home.php(15): CodeIgniter\Database\BaseConnection->query('select * from  datos.Usuarios limit 5')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:04:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  no existe la relación «datos.usuarios»
+LINE 1: select * from  datos.Usuarios limit 5
+                       ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 198.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('select * from  datos.Usuarios limit 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('select * from  datos.Usuarios limit 5')
+ 3 APPPATH\Controllers\Home.php(15): CodeIgniter\Database\BaseConnection->query('select * from  datos.Usuarios limit 5')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:04:25 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «datos.usuarios»
+LINE 1: select * from  datos.Usuarios limit 5
+                       ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «datos.usuarios»
+LINE 1: select * from  datos.Usuarios limit 5
+                       ^', 'C:\\xmp\\htdocs\\api\\system\\Database\\Postgre\\Connection.php', 193)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'select * from  datos.Usuarios limit 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('select * from  datos.Usuarios limit 5')
+ 4 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('select * from  datos.Usuarios limit 5')
+ 5 APPPATH\Controllers\Home.php(15): CodeIgniter\Database\BaseConnection->query('select * from  datos.Usuarios limit 5')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-31 19:08:42 --> ErrorException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: select * from  datos d.cedula=0923761832
+                              ^ in C:\xmp\htdocs\api\system\Database\Postgre\Connection.php:193
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xmp\\htdocs\\a...', 193)
+#1 C:\xmp\htdocs\api\system\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'select * from  ...')
+#2 C:\xmp\htdocs\api\system\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('select * from  ...')
+#3 C:\xmp\htdocs\api\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('select * from  ...')
+#4 C:\xmp\htdocs\api\app\Controllers\Home.php(15): CodeIgniter\Database\BaseConnection->query('select * from  ...')
+#5 C:\xmp\htdocs\api\system\CodeIgniter.php(933): App\Controllers\Home->test1('0923761832')
+#6 C:\xmp\htdocs\api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xmp\htdocs\api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xmp\htdocs\api\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xmp\htdocs\api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xmp\htdocs\api\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-31 19:08:42 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: select * from  datos d.cedula=0923761832
+                              ^
+[Method: GET, Route: home/test1/0923761832]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Home.php(15): CodeIgniter\Database\BaseConnection->query('select * from  datos d.cedula=0923761832')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1('0923761832')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:08:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: select * from  datos d.cedula=0923761832
+                              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 198.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('select * from  datos d.cedula=0923761832')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('select * from  datos d.cedula=0923761832')
+ 3 APPPATH\Controllers\Home.php(15): CodeIgniter\Database\BaseConnection->query('select * from  datos d.cedula=0923761832')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1('0923761832')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:08:42 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: select * from  datos d.cedula=0923761832
+                              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: select * from  datos d.cedula=0923761832
+                              ^', 'C:\\xmp\\htdocs\\api\\system\\Database\\Postgre\\Connection.php', 193)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'select * from  datos d.cedula=0923761832')
+ 3 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('select * from  datos d.cedula=0923761832')
+ 4 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('select * from  datos d.cedula=0923761832')
+ 5 APPPATH\Controllers\Home.php(15): CodeIgniter\Database\BaseConnection->query('select * from  datos d.cedula=0923761832')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1('0923761832')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:08:49 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:08:56 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:08:58 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:09:23 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:09:45 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:09:48 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:10:23 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:10:24 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:10:29 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:12:00 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:16:26 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:16:27 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:17:24 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:17:26 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:17:32 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:17:37 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:17:38 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:23:58 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:24:00 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:36:20 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-31 19:42:24 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^ in C:\xmp\htdocs\api\system\Database\Postgre\Connection.php:193
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xmp\\htdocs\\a...', 193)
+#1 C:\xmp\htdocs\api\system\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'INSERT INTO Usu...')
+#2 C:\xmp\htdocs\api\system\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO Usu...')
+#3 C:\xmp\htdocs\api\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO Usu...')
+#4 C:\xmp\htdocs\api\app\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO Usu...')
+#5 C:\xmp\htdocs\api\system\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+#6 C:\xmp\htdocs\api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xmp\htdocs\api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xmp\htdocs\api\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xmp\htdocs\api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xmp\htdocs\api\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-31 19:42:24 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^
+[Method: GET, Route: home/insert/1314451780/Andreina/Ganchozo/Femenino]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:42:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 198.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 3 APPPATH\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:42:24 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^', 'C:\\xmp\\htdocs\\api\\system\\Database\\Postgre\\Connection.php', 193)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 5 APPPATH\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:42:34 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::insert(), 1 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 4 expected
+[Method: GET, Route: home/insert/1314451780]
+in APPPATH\Controllers\Home.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:42:50 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:42:57 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-31 19:45:56 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^ in C:\xmp\htdocs\api\system\Database\Postgre\Connection.php:193
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xmp\\htdocs\\a...', 193)
+#1 C:\xmp\htdocs\api\system\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'INSERT INTO Usu...')
+#2 C:\xmp\htdocs\api\system\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO Usu...')
+#3 C:\xmp\htdocs\api\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO Usu...')
+#4 C:\xmp\htdocs\api\app\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO Usu...')
+#5 C:\xmp\htdocs\api\system\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+#6 C:\xmp\htdocs\api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xmp\htdocs\api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xmp\htdocs\api\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xmp\htdocs\api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xmp\htdocs\api\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-31 19:45:56 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^
+[Method: GET, Route: home/insert/1314451780/Andreina/Ganchozo/Femenino]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:45:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 198.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 3 APPPATH\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:45:56 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «usuarios.datos»
+LINE 1: INSERT INTO Usuarios.datos
+                    ^', 'C:\\xmp\\htdocs\\api\\system\\Database\\Postgre\\Connection.php', 193)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 5 APPPATH\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO Usuarios.datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:52:40 --> Error: Call to a member function getResult() on bool
+[Method: GET, Route: home/insert/1314451780/Andreina/Ganchozo/Femenino]
+in APPPATH\Controllers\Home.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:54:42 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::insert(), 1 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 4 expected
+[Method: GET, Route: home/insert/1314451780]
+in APPPATH\Controllers\Home.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 19:55:20 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:13:25 --> ParseError: Unmatched '}'
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 61.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('home', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('home')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('home')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:13:30 --> ParseError: Unmatched '}'
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 61.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('home', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('home')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('home')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-31 20:18:13 --> ErrorException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «(»
+LINE 2:     (cedula, nombre, apellido, genero)
+            ^ in C:\xmp\htdocs\api\system\Database\Postgre\Connection.php:193
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xmp\\htdocs\\a...', 193)
+#1 C:\xmp\htdocs\api\system\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'delete from dat...')
+#2 C:\xmp\htdocs\api\system\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('delete from dat...')
+#3 C:\xmp\htdocs\api\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('delete from dat...')
+#4 C:\xmp\htdocs\api\app\Controllers\Home.php(35): CodeIgniter\Database\BaseConnection->query('delete from dat...')
+#5 C:\xmp\htdocs\api\system\CodeIgniter.php(933): App\Controllers\Home->delete('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+#6 C:\xmp\htdocs\api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xmp\htdocs\api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xmp\htdocs\api\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xmp\htdocs\api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xmp\htdocs\api\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-31 20:18:13 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «(»
+LINE 2:     (cedula, nombre, apellido, genero)
+            ^
+[Method: GET, Route: home/delete/1314451780/Andreina/Ganchozo/Femenino]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Home.php(35): CodeIgniter\Database\BaseConnection->query('delete from datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:18:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «(»
+LINE 2:     (cedula, nombre, apellido, genero)
+            ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 198.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('delete from datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('delete from datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 3 APPPATH\Controllers\Home.php(35): CodeIgniter\Database\BaseConnection->query('delete from datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:18:13 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «(»
+LINE 2:     (cedula, nombre, apellido, genero)
+            ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «(»
+LINE 2:     (cedula, nombre, apellido, genero)
+            ^', 'C:\\xmp\\htdocs\\api\\system\\Database\\Postgre\\Connection.php', 193)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'delete from datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('delete from datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('delete from datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\Database\BaseConnection->query('delete from datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:22:39 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: PUT, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:22:45 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::test1(), 0 passed in C:\xmp\htdocs\api\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: home/test1]
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test1()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:26:35 --> Error: Call to a member function getResult() on bool
+[Method: GET, Route: home/insert/1314451780/Andreina/Ganchozo/Femenino]
+in APPPATH\Controllers\Home.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-31 20:28:46 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «cedula»
+LINE 2: WHERE &quot;id&quot; = 'cedula'
+                     ^ in C:\xmp\htdocs\api\system\Database\Postgre\Connection.php:193
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xmp\\htdocs\\a...', 193)
+#1 C:\xmp\htdocs\api\system\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'DELETE FROM "da...')
+#2 C:\xmp\htdocs\api\system\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "da...')
+#3 C:\xmp\htdocs\api\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "da...')
+#4 C:\xmp\htdocs\api\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM "da...', Array, false)
+#5 C:\xmp\htdocs\api\system\Database\Postgre\Builder.php(238): CodeIgniter\Database\BaseBuilder->delete('', NULL, true)
+#6 C:\xmp\htdocs\api\app\Controllers\Home.php(46): CodeIgniter\Database\Postgre\Builder->delete()
+#7 C:\xmp\htdocs\api\system\CodeIgniter.php(933): App\Controllers\Home->delete('16', '1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+#8 C:\xmp\htdocs\api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xmp\htdocs\api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xmp\htdocs\api\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xmp\htdocs\api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xmp\htdocs\api\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-31 20:28:46 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «cedula»
+LINE 2: WHERE &quot;id&quot; = 'cedula'
+                     ^
+[Method: GET, Route: home/delete/16/1314451780/Andreina/Ganchozo/Femenino]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM "datos"
+WHERE "id" = :id:', [...], false)
+ 2 SYSTEMPATH\Database\Postgre\Builder.php(238): CodeIgniter\Database\BaseBuilder->delete('', null, true)
+ 3 APPPATH\Controllers\Home.php(46): CodeIgniter\Database\Postgre\Builder->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete('16', '1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:28:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «cedula»
+LINE 2: WHERE &quot;id&quot; = 'cedula'
+                     ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 198.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "datos"
+WHERE "id" = \'cedula\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "datos"
+WHERE "id" = \'cedula\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM "datos"
+WHERE "id" = :id:', [...], false)
+ 4 SYSTEMPATH\Database\Postgre\Builder.php(238): CodeIgniter\Database\BaseBuilder->delete('', null, true)
+ 5 APPPATH\Controllers\Home.php(46): CodeIgniter\Database\Postgre\Builder->delete()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete('16', '1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:28:46 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «cedula»
+LINE 2: WHERE &quot;id&quot; = 'cedula'
+                     ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo integer: «cedula»
+LINE 2: WHERE &quot;id&quot; = \'cedula\'
+                     ^', 'C:\\xmp\\htdocs\\api\\system\\Database\\Postgre\\Connection.php', 193)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'DELETE FROM "datos"
+WHERE "id" = \'cedula\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "datos"
+WHERE "id" = \'cedula\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "datos"
+WHERE "id" = \'cedula\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM "datos"
+WHERE "id" = :id:', [...], false)
+ 6 SYSTEMPATH\Database\Postgre\Builder.php(238): CodeIgniter\Database\BaseBuilder->delete('', null, true)
+ 7 APPPATH\Controllers\Home.php(46): CodeIgniter\Database\Postgre\Builder->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete('16', '1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 20:39:38 --> ErrorException: Undefined variable $builder
+[Method: GET, Route: home/insert/1314451780/Andreina/Ganchozo/Femenino]
+in APPPATH\Controllers\Home.php on line 28.
+ 1 APPPATH\Controllers\Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $builder', 'C:\\xmp\\htdocs\\api\\app\\Controllers\\Home.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 21:50:00 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: home/insert/1314451780/Andreina/Ganchozo/Femenino]
+in APPPATH\Controllers\Home.php on line 45.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('home/insert/1314451780/Andreina/Ganchozo/Femenino', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('home/insert/1314451780/Andreina/Ganchozo/Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('home/insert/1314451780/Andreina/Ganchozo/Femenino')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 21:50:40 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: home/insert/1314451780/Andreina/Ganchozo/Femenino]
+in APPPATH\Controllers\Home.php on line 45.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('home/insert/1314451780/Andreina/Ganchozo/Femenino', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('home/insert/1314451780/Andreina/Ganchozo/Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('home/insert/1314451780/Andreina/Ganchozo/Femenino')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 21:53:59 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: home/insert/1314451780/Andreina/Ganchozo/Femenino]
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('home/insert/1314451780/Andreina/Ganchozo/Femenino', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('home/insert/1314451780/Andreina/Ganchozo/Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('home/insert/1314451780/Andreina/Ganchozo/Femenino')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 22:03:17 --> ParseError: Unclosed '{' on line 6
+[Method: GET, Route: home/update/1314451780/Andreina/Mora/Femenino]
+in APPPATH\Controllers\Home.php on line 80.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('home/update/1314451780/Andreina/Mora/Femenino', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('home/update/1314451780/Andreina/Mora/Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('home/update/1314451780/Andreina/Mora/Femenino')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 22:03:31 --> ParseError: Unclosed '{' on line 6
+[Method: GET, Route: home/update/19/1314451780/Andreina/Mora/Femenino]
+in APPPATH\Controllers\Home.php on line 80.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('home/update/19/1314451780/Andreina/Mora/Femenino', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('home/update/19/1314451780/Andreina/Mora/Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('home/update/19/1314451780/Andreina/Mora/Femenino')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 22:03:41 --> ParseError: Unclosed '{' on line 6
+[Method: GET, Route: home/update/19]
+in APPPATH\Controllers\Home.php on line 80.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('home/update/19', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('home/update/19')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('home/update/19')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-31 22:08:24 --> ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «datos_cedula_key»
+DETAIL:  Ya existe la llave (cedula)=(1314451780). in C:\xmp\htdocs\api\system\Database\Postgre\Connection.php:193
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xmp\\htdocs\\a...', 193)
+#1 C:\xmp\htdocs\api\system\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'INSERT INTO dat...')
+#2 C:\xmp\htdocs\api\system\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO dat...')
+#3 C:\xmp\htdocs\api\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO dat...')
+#4 C:\xmp\htdocs\api\app\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO dat...')
+#5 C:\xmp\htdocs\api\system\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+#6 C:\xmp\htdocs\api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xmp\htdocs\api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xmp\htdocs\api\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xmp\htdocs\api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xmp\htdocs\api\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-31 22:08:24 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «datos_cedula_key»
+DETAIL:  Ya existe la llave (cedula)=(1314451780).
+[Method: GET, Route: home/insert/1314451780/Andreina/Ganchozo/Femenino]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 22:08:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «datos_cedula_key»
+DETAIL:  Ya existe la llave (cedula)=(1314451780).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 198.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 3 APPPATH\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 22:08:24 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «datos_cedula_key»
+DETAIL:  Ya existe la llave (cedula)=(1314451780).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «datos_cedula_key»
+DETAIL:  Ya existe la llave (cedula)=(1314451780).', 'C:\\xmp\\htdocs\\api\\system\\Database\\Postgre\\Connection.php', 193)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), 'INSERT INTO datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 5 APPPATH\Controllers\Home.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO datos
+    (cedula, nombre, apellido, genero)
+    VALUES(\'1314451780\', \'Andreina\', \'Ganchozo\', \'Femenino\')')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->insert('1314451780', 'Andreina', 'Ganchozo', 'Femenino')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-31 22:14:55 --> ErrorException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «datos»
+LINE 1:  DELETE datos SET nombre = 'Andreina', apellido = 'Mora', ge...
+                ^ in C:\xmp\htdocs\api\system\Database\Postgre\Connection.php:193
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xmp\\htdocs\\a...', 193)
+#1 C:\xmp\htdocs\api\system\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), ' DELETE datos S...')
+#2 C:\xmp\htdocs\api\system\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute(' DELETE datos S...')
+#3 C:\xmp\htdocs\api\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery(' DELETE datos S...')
+#4 C:\xmp\htdocs\api\app\Controllers\Home.php(45): CodeIgniter\Database\BaseConnection->query(' DELETE datos S...')
+#5 C:\xmp\htdocs\api\system\CodeIgniter.php(933): App\Controllers\Home->delete('1314451780', 'Andreina', 'Mora', 'Femenino')
+#6 C:\xmp\htdocs\api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xmp\htdocs\api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xmp\htdocs\api\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xmp\htdocs\api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xmp\htdocs\api\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-31 22:14:55 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «datos»
+LINE 1:  DELETE datos SET nombre = 'Andreina', apellido = 'Mora', ge...
+                ^
+[Method: GET, Route: home/delete/1314451780/Andreina/Mora/Femenino]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Home.php(45): CodeIgniter\Database\BaseConnection->query(' DELETE datos SET nombre = \'Andreina\', apellido = \'Mora\', genero = \'Femenino\' WHERE 
+        cedula = \'1314451780\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete('1314451780', 'Andreina', 'Mora', 'Femenino')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 22:14:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «datos»
+LINE 1:  DELETE datos SET nombre = 'Andreina', apellido = 'Mora', ge...
+                ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 198.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute(' DELETE datos SET nombre = \'Andreina\', apellido = \'Mora\', genero = \'Femenino\' WHERE 
+        cedula = \'1314451780\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery(' DELETE datos SET nombre = \'Andreina\', apellido = \'Mora\', genero = \'Femenino\' WHERE 
+        cedula = \'1314451780\'')
+ 3 APPPATH\Controllers\Home.php(45): CodeIgniter\Database\BaseConnection->query(' DELETE datos SET nombre = \'Andreina\', apellido = \'Mora\', genero = \'Femenino\' WHERE 
+        cedula = \'1314451780\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete('1314451780', 'Andreina', 'Mora', 'Femenino')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-31 22:14:55 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «datos»
+LINE 1:  DELETE datos SET nombre = 'Andreina', apellido = 'Mora', ge...
+                ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 193.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «datos»
+LINE 1:  DELETE datos SET nombre = \'Andreina\', apellido = \'Mora\', ge...
+                ^', 'C:\\xmp\\htdocs\\api\\system\\Database\\Postgre\\Connection.php', 193)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(193): pg_query(Object(PgSql\Connection), ' DELETE datos SET nombre = \'Andreina\', apellido = \'Mora\', genero = \'Femenino\' WHERE 
+        cedula = \'1314451780\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\Postgre\Connection->execute(' DELETE datos SET nombre = \'Andreina\', apellido = \'Mora\', genero = \'Femenino\' WHERE 
+        cedula = \'1314451780\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery(' DELETE datos SET nombre = \'Andreina\', apellido = \'Mora\', genero = \'Femenino\' WHERE 
+        cedula = \'1314451780\'')
+ 5 APPPATH\Controllers\Home.php(45): CodeIgniter\Database\BaseConnection->query(' DELETE datos SET nombre = \'Andreina\', apellido = \'Mora\', genero = \'Femenino\' WHERE 
+        cedula = \'1314451780\'')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->delete('1314451780', 'Andreina', 'Mora', 'Femenino')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
